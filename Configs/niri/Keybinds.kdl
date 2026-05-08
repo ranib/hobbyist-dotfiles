@@ -115,9 +115,12 @@ binds {
   Mod+V       { toggle-window-floating; }
   Mod+Ctrl+V { switch-focus-between-floating-and-tiling; }
 
-  Mod+Print { screenshot; }
-  Print { screenshot-screen; }
-  Mod+Ctrl+Print { screenshot-window; }
+  // Print { screenshot-screen; }
+  // Mod+Print { screenshot; }
+  // Ctrl+Print { screenshot-window; }
+  Print {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
+  Alt+Print {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
+  Ctrl+Print {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
 
   Mod+ctrl+E { quit skip-confirmation=true; }
 }
