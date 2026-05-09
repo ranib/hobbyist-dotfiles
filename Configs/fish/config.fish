@@ -64,3 +64,6 @@ alias gc='git clone'
 alias send='bash ~/.config/Scripts/kde-send.sh'
 
 zoxide init fish | source
+
+set -x VISUAL nvim
+set -x EDITOR nvim

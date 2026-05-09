@@ -27,33 +27,28 @@ thickness = 0.15
 [keyboard]
 bindings = [
 { key = "V", mods = "Control", action = "Paste" },
-#{ key = "C", mods = "Control", action = "Copy" },
 ]
 
 [colors.primary]
-background = "#000000"
-foreground = "#d4d4d4"
-
-[colors.cursor]
-text = "#1e1e1e"
-cursor = "#ffffff"
+background = '#000000'
+foreground = '#ffffff'
 
 [colors.normal]
-black = "#000000"#"#2e3436"
-red = "#cc0000"
-green = "#4e9a06"
-yellow = "#c4a000"
-blue = "#3465a4"
-magenta = "#75507b"
-cyan = "#06989a"
-white = "#d3d7cf"
+black      = '#000000'
+red        = '#ff0000'
+green      = '#00ff00'
+blue       = '#0000ff'
+yellow     = '#ffff00'
+magenta    = '#ee82ee'
+cyan       = '#00ffff'
+white      = '#ffffff'
 
 [colors.bright]
-black = "#555753"
-red = "#ef2929"
-green = "#00ff00"
-yellow = "#fce94f"
-blue = "#729fcf"
-magenta = "#ad7fa8"
-cyan = "#34e2e2"
-white = "#eeeeec"
+black      = '#bfbfbf'
+red        = '#ff0000'
+green      = '#00ff00'
+blue       = '#0000ff'
+yellow     = '#ffff00'
+magenta    = '#ee82ee'
+cyan       = '#00ffff'
+white      = '#ffffff'
