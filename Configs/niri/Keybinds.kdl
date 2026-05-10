@@ -3,12 +3,11 @@ binds {
   Mod+R { spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"; }
   Mod+W repeat=false { spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh"; }
   Mod+D { spawn "kdeconnect-app"; }
-  Mod+A {spawn-sh "notify-send 'Reserved keybind' 'This keybind is reserved for testing'"; }
   Mod+B { spawn "librewolf"; }
   Mod+M { spawn "Telegram"; }
   Mod+Z repeat=false { spawn "localsend"; }
   Mod+S { spawn-sh "brave -new-window || brave-origin-beta https://www.youtube.com"; }
-  Mod+Return { spawn "alacritty"; }
+  Mod+A { spawn "alacritty"; }
   Mod+N { spawn-sh "kitty -e yazi"; }
   Mod+G { spawn-sh "kitty -e btop"; }
   Mod+E { spawn-sh "kitty -e bluetui"; }
