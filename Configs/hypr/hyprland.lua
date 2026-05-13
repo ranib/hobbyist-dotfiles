@@ -178,17 +178,58 @@ hl.config({
     },
 })
 
+------------------
+---- GESTURES ----
+------------------
+
+hl.config({
+    gestures = {
+        workspace_swipe_create_new = true,
+        workspace_swipe_forever = true,
+        workspace_swipe_direction_lock = false,
+        close_max_timeout = 100
+    }
+})
+
 hl.gesture({
     fingers = 3,
-    direction = "horizontal",
+    direction = "vertical",
     action = "workspace"
+})
+
+for _, dir in ipairs({"left", "right"}) do
+    hl.gesture({
+        fingers = 3,
+        direction = dir,
+        action = function()
+            hl.dispatch(hl.dsp.focus({direction = dir}))
+        end
+    })
+end
+
+hl.gesture({
+  fingers = 3,
+  direction = "pinch",
+  action = "fullscreen",
+})
+
+hl.gesture({
+  fingers = 4,
+  direction = "pinch",
+  action = "close",
+})
+
+hl.gesture({
+  fingers = 3,
+  mods = "SUPER",
+  direction = "pinch",
+  action = "float",
 })
 
 hl.device({
     name        = "epic-mouse-v1",
     sensitivity = -0.5,
 })
-
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -366,6 +407,7 @@ hl.layer_rule({
     name  = "waybar",
     match = { namespace = "waybar" },
     blur = true,
+    blur_popups = true,
     ignore_alpha = 0,
     animation = "slide top",
 })
