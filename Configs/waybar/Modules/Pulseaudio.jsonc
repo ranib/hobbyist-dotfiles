@@ -7,9 +7,9 @@
         "format-bluetooth":" {icon} {volume}%",
         "format-muted": "   Muted",
         "format-icons": { "default": [" ", "  ", "   "]},
-	      "on-click": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-",
+	      "on-click": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
 	      "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-	      "on-click-right": "wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.0 10%+",
+	      "on-click-right": "wpctl set-volume @DEFAULT_AUDIO_SINK@ -l 1.0 1%+",
 	      "on-double-click-middle": "kitty -e pulsemixer"
     }
 }
