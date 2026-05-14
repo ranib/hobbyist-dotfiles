@@ -24,5 +24,4 @@ for term in "${TERMINALS[@]}"; do
     fi
 done
 
-echo "No terminal found." >&2
-exit 1
+notify-send "No Terminal Found" "Please install a terminal emulator"

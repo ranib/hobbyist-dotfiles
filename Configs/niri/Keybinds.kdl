@@ -8,7 +8,7 @@ binds {
   Mod+Z repeat=false { spawn "localsend"; }
   Mod+S { spawn-sh "brave -new-window || brave-origin-beta https://www.youtube.com"; }
   Mod+A { spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh"; }
-  Mod+N { spawn-sh "ghostty -e yazi"; }
+  Mod+N { spawn-sh "foot -e yazi"; }
   Mod+G { spawn-sh "kitty -e btop"; }
   Mod+E { spawn-sh "kitty -e bluetui"; }
   Mod+Y { spawn-sh "kitty -e nmtui"; }
@@ -115,7 +115,7 @@ binds {
   Mod+Shift+Equal { set-window-height "+10%"; }
 
   Mod+V       { toggle-window-floating; }
-  Mod+Ctrl+V { switch-focus-between-floating-and-tiling; }
+  Mod+Shift+V { switch-focus-between-floating-and-tiling; }
 
   // Print { screenshot-screen; }
   // Mod+Print { screenshot; }

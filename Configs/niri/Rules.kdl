@@ -2,26 +2,15 @@ window-rule {
   geometry-corner-radius 24
   clip-to-geometry true
   // open-maximized true
+  // open-maximized true
+  // open-maximized-to-edges true
 }
 
 window-rule {
   match app-id="^kitty$"
   match app-id="^Alacritty$"
-  match app-id="org.kde.kdeconnect.app"
-  match app-id="localsend"
   background-effect {
     blur true
-  }
-  popups {
-    opacity 0.5
-    geometry-corner-radius 15
-
-    background-effect {
-      xray true
-      blur true
-      noise 0.05
-      saturation 3
-    }
   }
 }
 
@@ -31,9 +20,17 @@ window-rule {
   match app-id="org.kde.kdeconnect.daemon"
   open-floating true
   open-focused false
-  default-floating-position x=32 y=32 relative-to="bottom-right"
-  default-column-width { proportion 0.25; }
-  default-window-height { proportion 0.25; }
+  default-floating-position x=20 y=20 relative-to="bottom-right"
+  default-column-width { proportion 0.22; }
+  default-window-height { proportion 0.22; }
+  shadow {
+        on
+        softness 60
+        spread 5
+        offset x=0 y=10
+        draw-behind-window true
+        color "#000000"
+    }
 }
 
 layer-rule {
@@ -41,7 +38,6 @@ layer-rule {
   geometry-corner-radius 50
   background-effect {
     blur true
-    xray false
   }
 }
 
@@ -50,7 +46,6 @@ layer-rule {
   match namespace="quickshell"
   match namespace="^logout_dialog$"
   background-effect {
-    xray false
     blur true
   }
 }
@@ -58,48 +53,22 @@ layer-rule {
 window-rule {
   match app-id="Brave-origin-beta"
   match app-id="librewolf"
-  match app-id="org.telegram.desktop"
-  opacity 0.8
-  clip-to-geometry true
-  // open-fullscreen true
+  match app-id="foot"
+  match app-id="com.mitchellh.ghostty"
   open-maximized true
-  // open-maximized-to-edges true
-  // open-floating true
-  // open-focused true
-  background-effect {
-    blur true
-  }
-  popups {
-    opacity 0.8
-    geometry-corner-radius 8
-
-    background-effect {
-      xray false
-      blur true
-      noise 0.05
-      saturation 3
-    }
-  }
-
 }
 
 window-rule {
   match app-id="jetbrains-idea"
   open-fullscreen true
-  // open-maximized true
-  // open-maximized-to-edges true
-  // open-floating true
-  // open-focused true
 }
 
 window-rule {
   match app-id="org.kde.kdeconnect.app"
   match app-id="localsend"
-  opacity 0.8
-  baba-is-float true
   open-floating true
   open-focused true
-  default-floating-position x=32 y=32 relative-to="bottom-right"
-  default-column-width { proportion 0.20; }
+  default-floating-position x=20 y=20 relative-to="bottom-right"
+  default-column-width { fixed 400; }
   default-window-height { proportion 0.72; }
 }
