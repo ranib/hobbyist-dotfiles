@@ -22,6 +22,7 @@ gpu-screen-recorder
 grim
 hyprlock
 imagemagick
+ttf-jetbrains-mono-nerd
 kdeconnect
 kitty
 libnotify

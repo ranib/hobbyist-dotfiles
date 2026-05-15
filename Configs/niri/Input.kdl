@@ -1,8 +1,8 @@
 input {
   keyboard {
     xkb {
-      layout "br"
-      variant "abnt2"
+      layout "us"
+      // variant "abnt2"
     }
 
     repeat-rate 60
