@@ -9,14 +9,14 @@ sudo pacman -S --needed --noconfirm base-devel stow fish eza git
 
 echo "[+] Verifying whether yay is installed or not..."
 if ! command -v yay &>/dev/null; then
-    echo "[!] yay not found"
-    echo "[+] Installing yay..."
-    tmpdir=$(mktemp -d)
-    trap 'rm -rf "$tmpdir"' EXIT
-    git clone https://aur.archlinux.org/yay-bin.git "$tmpdir/yay-bin"
-    (cd "$tmpdir/yay-bin" && makepkg -si --noconfirm)
+  echo "[!] yay not found"
+  echo "[+] Installing yay..."
+  tmpdir=$(mktemp -d)
+  trap 'rm -rf "$tmpdir"' EXIT
+  git clone https://aur.archlinux.org/yay-bin.git "$tmpdir/yay-bin"
+  (cd "$tmpdir/yay-bin" && makepkg -si --noconfirm)
 else
-    echo "[=] yay already installed"
+  echo "[=] yay already installed"
 fi
 
 echo "[+] Creating config directories..."
@@ -25,26 +25,42 @@ mkdir -p ~/.local/share/fonts
 DOTFILES="$HOME/hobbyist-dotfiles"
 
 if [ -d "$DOTFILES" ]; then
-    echo "[+] Applying dotfiles..."
-    (cd "$DOTFILES" && stow -t ~/.config Configs)
+  echo "[+] Applying dotfiles..."
+  (cd "$DOTFILES" && stow -t ~/.config Configs)
 
-    echo "[+] Copying fonts and wallpapers..."
-    cp -r "$DOTFILES/Configs/Resources/fonts/." ~/.local/share/fonts/
-    cp -r "$DOTFILES/Wallpapers" ~/
+  echo "[+] Copying fonts and wallpapers..."
+  cp -r "$DOTFILES/Configs/Resources/fonts/." ~/.local/share/fonts/
+  cp -r "$DOTFILES/Wallpapers" ~/
 
-    pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
-    if [ -f "$pkglist" ]; then
-        echo "[+] Installing packages from list..."
-        xargs yay -S --needed --answerclean All --answerdiff None --noconfirm \
-            < "$pkglist"
+  pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
+  if [ -f "$pkglist" ]; then
+    echo "[+] Installing packages from list..."
+
+    if pacman -Qi niri &>/dev/null && grep -q '^niri-git$' "$pkglist"; then
+      echo "[!] Conflict: stable 'niri' is installed, pkglist has 'niri-git'."
+      echo "    [1] Remove stable niri and install niri-git"
+      echo "    [2] Skip niri-git, keep stable niri"
+      read -rp "    Choice [1/2]: " niri_choice
+      if [[ "$niri_choice" == "1" ]]; then
+        sudo pacman -Rns --noconfirm niri
+      else
+        _filtered=$(mktemp)
+        grep -v '^niri-git$' "$pkglist" > "$_filtered"
+        pkglist="$_filtered"
+      fi
     fi
+
+    xargs yay -S --needed --answerclean All --answerdiff None --noconfirm \
+      < "$pkglist"
+  fi
+
 else
-    echo "[!] Dotfiles repo not found at $DOTFILES — skipping dotfiles, resources, and package list."
+  echo "[!] Dotfiles repo not found at $DOTFILES — skipping dotfiles, resources, and package list."
 fi
 
 if command -v fish &>/dev/null; then
-    echo "[+] Setting fish as default shell..."
-    chsh -s "$(command -v fish)"
+  echo "[+] Setting fish as default shell..."
+  chsh -s "$(command -v fish)"
 fi
 
 if ! pacman -Q bluez bluez-utils &>/dev/null; then
