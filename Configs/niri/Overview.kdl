@@ -3,8 +3,8 @@ overview {
   backdrop-color "#ffffff"
 
   workspace-shadow {
-    softness 200
-    spread 10
+    softness 300
+    spread 20
     offset x=0 y=0
     color "#000000"
   }
