@@ -9,6 +9,27 @@ hl.monitor({
     scale    = "1.0",
 })
 
+---------------
+---- INPUT ----
+---------------
+
+hl.config({
+    input = {
+        kb_layout  = "us",
+        numlock_by_default = false,
+        repeat_rate = 60,
+        repeat_delay = 300,
+        follow_mouse = 1,
+        sensitivity = 1.0,
+        scroll_factor = 2.0,
+        accel_profile = "adaptive",
+        touchpad = {
+            natural_scroll = true,
+            disable_while_typing = true,
+        },
+    },
+})
+
 -------------------
 ---- AUTOSTART ----
 -------------------
@@ -172,27 +193,6 @@ hl.config({
         enable_swallow = true,
         swallow_regex = "(kitty|Alacritty|ghostty)",
         middle_click_paste = true,
-    },
-})
-
----------------
----- INPUT ----
----------------
-
-hl.config({
-    input = {
-        kb_layout  = "us",
-        numlock_by_default = false,
-        repeat_rate = 60,
-        repeat_delay = 200,
-        follow_mouse = 1,
-        sensitivity = 1.0,
-        scroll_factor = 2.0,
-        accel_profile = "adaptive",
-        touchpad = {
-            natural_scroll = true,
-            disable_while_typing = true,
-        },
     },
 })
 

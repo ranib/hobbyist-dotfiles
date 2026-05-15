@@ -2,11 +2,10 @@ input {
   keyboard {
     xkb {
       layout "us"
-      // variant "abnt2"
     }
 
     repeat-rate 60
-    repeat-delay 200
+    repeat-delay 300
   }
 
   touchpad {
@@ -14,14 +13,14 @@ input {
     natural-scroll
     accel-speed 1.0
     accel-profile "adaptive"
-    scroll-factor 3.0
+    scroll-factor 2.0
     scroll-method "two-finger"
   }
 
   mouse {
     accel-speed 1.0
     accel-profile "adaptive"
-    scroll-factor 3.0
+    scroll-factor 2.0
   }
 
   focus-follows-mouse
