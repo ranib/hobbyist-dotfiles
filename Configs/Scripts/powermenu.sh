@@ -1,15 +1,18 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-theme="$HOME/.config/rofi/clipboard.rasi"
+options="  Shutdown\n  Reboot\n  Suspend\n  Lock\n  Logout"
 
-options="Poweroff\nReboot\nSuspend\nLock\nLogout"
-
-chosen="$(echo -e "$options" | rofi -dmenu -theme "$theme")" || exit 0
+chosen=$(printf "$options" | fzf \
+  --prompt=" Powermenu: " \
+  --reverse \
+  # --border \
+  --no-info \
+  --height=40%)
 
 case "$chosen" in
-    Poweroff) systemctl poweroff ;;
-    Reboot)   systemctl reboot ;;
-    Suspend)  systemctl suspend ;;
-    Lock)     bash ~/.config/Scripts/random_wall_on_lockscr.sh ;;
-    Logout)   loginctl terminate-user "$USER" ;;
+  *Shutdown) systemctl poweroff ;;
+  *Reboot)   systemctl reboot ;;
+  *Suspend)  systemctl suspend ;;
+  *Lock)     loginctl lock-session ;;
+  *Logout)   loginctl terminate-user $USER ;;
 esac
