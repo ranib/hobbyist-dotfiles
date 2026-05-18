@@ -2,44 +2,44 @@
 
 set -euo pipefail
 
-echo "[+] Starting Arch setup..."
+printf "[+] Starting Arch setup...\n"
 
-echo "[+] Installing base packages..."
+printf "[+] Installing base packages...\n"
 sudo pacman -S --needed --noconfirm base-devel stow fish eza git
 
-echo "[+] Verifying whether yay is installed or not..."
+printf "[+] Verifying whether yay is installed or not...\n"
 if ! command -v yay &>/dev/null; then
-  echo "[!] yay not found"
-  echo "[+] Installing yay..."
+  printf "[!] yay not found\n"
+  printf "[+] Installing yay...\n"
   tmpdir=$(mktemp -d)
   trap 'rm -rf "$tmpdir"' EXIT
   git clone https://aur.archlinux.org/yay-bin.git "$tmpdir/yay-bin"
   (cd "$tmpdir/yay-bin" && makepkg -si --noconfirm)
 else
-  echo "[=] yay already installed"
+  printf "[=] yay already installed\n"
 fi
 
-echo "[+] Creating config directories..."
+printf "[+] Creating config directories...\n"
 mkdir -p ~/.local/share/fonts
 
 DOTFILES="$HOME/hobbyist-dotfiles"
 
 if [ -d "$DOTFILES" ]; then
-    echo "[+] Applying dotfiles..."
-    bash "$DOTFILES/stow-configs.sh"
+  printf "[+] Applying dotfiles...\n"
+  bash "$DOTFILES/stow-configs.sh"
 
-  echo "[+] Copying fonts and wallpapers..."
+  printf "[+] Copying fonts and wallpapers...\n"
   cp -r "$DOTFILES/Configs/Resources/fonts/." ~/.local/share/fonts/
   cp -r "$DOTFILES/Wallpapers" ~/
 
   pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
   if [ -f "$pkglist" ]; then
-    echo "[+] Installing packages from list..."
+    printf "[+] Installing packages from list...\n"
 
     if pacman -Qi niri &>/dev/null && grep -q '^niri-git$' "$pkglist"; then
-      echo "[!] Conflict: stable 'niri' is installed, pkglist has 'niri-git'."
-      echo "    [1] Remove stable niri and install niri-git"
-      echo "    [2] Skip niri-git, keep stable niri"
+      printf "[!] Conflict: stable 'niri' is installed, pkglist has 'niri-git'.\n"
+      printf "    [1] Remove stable niri and install niri-git\n"
+      printf "    [2] Skip niri-git, keep stable niri\n"
       read -rp "    Choice [1/2]: " niri_choice
       if [[ "$niri_choice" == "1" ]]; then
         sudo pacman -Rns --noconfirm niri
@@ -55,38 +55,46 @@ if [ -d "$DOTFILES" ]; then
   fi
 
 else
-  echo "[!] Dotfiles repo not found at $DOTFILES — skipping dotfiles, resources, and package list."
+  printf "[!] Dotfiles repo not found at $DOTFILES — skipping dotfiles, resources, and package list.\n"
 fi
 
 if command -v fish &>/dev/null; then
-  echo "[+] Setting fish as default shell..."
+  printf "[+] Setting fish as default shell...\n"
   chsh -s "$(command -v fish)"
 fi
 
 if ! pacman -Q bluez bluez-utils &>/dev/null; then
-  yay -S bluez bluez-utils && echo "bluez and bluez-utils installed successfully"
-fi
-echo "[+] Enabling Bluetooth..."
-sudo systemctl enable --now bluetooth.service
-sudo rfkill unblock bluetooth || true
-
-echo "[+] Setting Niri as default..."
-if [[ -f "$HOME/.config/systemd/user/niri.service" ]]; then
-  systemctl --user daemon-reload
-  systemctl --user enable --now niri.service
+  yay -S --needed --answerclean All --answerdiff None --noconfirm bluez bluez-utils && printf "bluez and bluez-utils installed successfully\n"
 fi
 
-echo "[+] Enabling mako sound..."
-if [[ -f "$HOME/.config/systemd/user/mako-sound.service" ]]; then
-  systemctl --user daemon-reload
-  systemctl --user enable --now mako-sound.service
+init=$(ps -p 1 -o comm=)
+if [[ "$init" == "systemd" ]]; then
+  printf "[+] Enabling Bluetooth...\n"
+  sudo systemctl enable --now bluetooth.service
+  sudo rfkill unblock bluetooth || true
+
+  printf "[+] Setting Niri as default...\n"
+  if [[ -f "$HOME/.config/systemd/user/niri.service" ]]; then
+    systemctl --user daemon-reload
+    systemctl --user enable --now niri.service
+  fi
+
+  printf "[+] Enabling mako sound...\n"
+  if [[ -f "$HOME/.config/systemd/user/mako-sound.service" ]]; then
+    systemctl --user daemon-reload
+    systemctl --user enable --now mako-sound.service
+  fi
+
+else
+  printf "[!] Skipping....\n"
+  printf "[!] System is not running on $init\n"
 fi
 
-echo "[+] Installing WhiteSur icon pack..."
+printf "[+] Installing WhiteSur icon pack...\n"
 cd ~
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
 cd ~/WhiteSur-icon-theme
 bash install.sh
 rm -rf ~/WhiteSur-icon-theme/
 
-echo "[✓] Setup completed successfully!"
+printf "[✓] Setup completed successfully!"

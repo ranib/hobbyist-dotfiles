@@ -108,9 +108,9 @@ bash install.sh
 If GNU Stow reports conflicts, use the helper directly:
 
 ```bash
-./stow-configs.sh --dry-run
-./stow-configs.sh --backup-conflicts
-./stow-configs.sh --adopt
+bash stow-configs.sh --dry-run
+bash stow-configs.sh --backup-conflicts
+bash stow-configs.sh --adopt
 ```
 
 `--adopt` can overwrite existing files, so only use it when you intend to merge local state into the repo.
