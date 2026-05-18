@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 TERMINALS=(
+  footclient
   foot
+  kitty
   alacritty
   ghostty
   wezterm

@@ -9,7 +9,6 @@
 /home/blackspark/Music/Vinland Saga.m4a
 /home/blackspark/Music/Dj_Rohan_Raj_Official - LAGA_KE_THARMAMETER_REMIX_DJ_ROHAN_RAJ.opus
 /home/blackspark/Music/Nighahen Kyon Churaati Hai - Udit Narayan, Ram Shankar.flac
-/home/blackspark/Music/Ritesh_Creation - Bagal_Wali_Jaan_Mareli_Dj_Remix_Bhojpuri_Dj_Remix_Song_New_Bhojpuri_Remix_Song_2022.opus
 /home/blackspark/Music/Mitraz - Laaya.flac
 /home/blackspark/Music/MONTAGEM CHAPADÃO DE CRACK  BEAT MATA NOIA - DJPH01.mp3
 /home/blackspark/Music/Shrey Singhal - Teri Yaadein.m4a
