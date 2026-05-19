@@ -90,6 +90,12 @@ else
   printf "[!] System is not running on $init\n"
 fi
 
+if [[ -f "$HOME/.config/Scripts/bashfix.sh" ]]; then
+  bash "$HOME/.config/Scripts/bashfix.sh"
+else
+  printf "bashfix not found\n"
+fi
+
 printf "[+] Installing WhiteSur icon pack...\n"
 cd ~
 git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git
