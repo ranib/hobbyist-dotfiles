@@ -27,7 +27,7 @@ libnotify
 librewolf-bin
 localsend-bin
 mako
-mangowm-git
+mangowm
 mpv
 ncdu
 neovim
