@@ -6,17 +6,17 @@ This file groups the window-manager keybinds by behavior:
 - **Shared by most WMs**: actions that are common, but not universal.
 - **WM-specific binds**: actions that are unique or notably different per WM.
 
-`Mod` generally means the main modifier key (`Super`/Windows key). Some configs write it as `SUPER` or `mod`.
+`Mod` generally means the main Modifier key (`Super`/Windows key). Some configs write it as `SUPER` or `Mod`.
 
 ## Works in every WM
 
 | Action | Niri | MangoWM | Hyprland | DriftWM | Qtile |
 |---|---|---|---|---|---|
-| Terminal | `Mod+T`, `Mod+Return` | `SUPER+T`, `SUPER+Return` | `SUPER+T`, `SUPER+Return` | `mod+t` | `mod+t` |
-| App launcher | `Mod+Space` | `SUPER+Space` | `SUPER+Space` | `mod+space` | `mod+space` |
-| Close focused window | `Mod+Q` | `SUPER+Q` | `SUPER+Q` | `mod+q` | `mod+q` |
-| Quit WM/compositor | `Mod+Ctrl+E` | `SUPER+CTRL+E` | `SUPER+CTRL+E` | `mod+ctrl+e` | `mod+control+e` |
-| Toggle fullscreen | `Alt+M` | `ALT+F` | `ALT+F` / `SUPER+F` | `mod+f` | `mod+f` |
+| Terminal | `Mod+T`, `Mod+Return` | `SUPER+T`, `SUPER+Return` | `SUPER+T`, `SUPER+Return` | `Mod+t` | `Mod+t` |
+| App launcher | `Mod+Space` | `SUPER+Space` | `SUPER+Space` | `Mod+space` | `Mod+space` |
+| Close focused window | `Mod+Q` | `SUPER+Q` | `SUPER+Q` | `Mod+q` | `Mod+q` |
+| Quit WM/compositor | `Mod+Ctrl+E` | `SUPER+CTRL+E` | `SUPER+CTRL+E` | `Mod+ctrl+e` | `Mod+control+e` |
+| Toggle fullscreen | `Alt+M` | `ALT+F` | `ALT+F` / `SUPER+F` | `Mod+f` | `Mod+f` |
 | Volume/media keys | `XF86Audio*`, `Alt+Bracket/Slash` | `XF86Audio*`, `ALT+Bracket/Slash` | `XF86Audio*`, `ALT+Bracket/Slash` | `XF86Audio*` | `XF86Audio*` |
 | Brightness keys | `XF86MonBrightness*`, `Alt+'`, `Alt+;` | `XF86MonBrightness*`, `ALT+'`, `ALT+;` | `XF86MonBrightness*`, `ALT+'`, `ALT+;` | `XF86MonBrightness*` | `XF86MonBrightness*` |
 
@@ -24,25 +24,25 @@ This file groups the window-manager keybinds by behavior:
 
 | Action | Niri | MangoWM | Hyprland | DriftWM | Qtile |
 |---|---|---|---|---|---|
-| Browser | `Mod+B` | `SUPER+B` | `SUPER+B` | `mod+b` | — |
-| File manager / Yazi | `Mod+N` | `SUPER+N` | `SUPER+N` | `mod+n` | `mod+n` |
-| Music player / cmus | `Mod+X` | `SUPER+X` | `SUPER+X` | `mod+x` | — |
+| Browser | `Mod+B` | `SUPER+B` | `SUPER+B` | `Mod+b` | — |
+| File manager / Yazi | `Mod+N` | `SUPER+N` | `SUPER+N` | `Mod+n` | `Mod+n` |
+| Music player / cmus | `Mod+X` | `SUPER+X` | `SUPER+X` | `Mod+x` | — |
 | System monitor / btop | `Mod+G` | `SUPER+G` | `SUPER+G` | — | — |
-| Clipboard history | `Mod+C` | `SUPER+C` | `SUPER+C` | — | `mod+h` |
+| Clipboard history | `Mod+C` | `SUPER+C` | `SUPER+C` | — | `Mod+h` |
 | Power menu | `Mod+P` | `SUPER+P` | `SUPER+P` | — | — |
 | Random wallpaper | `Mod+W` | `SUPER+W` | `SUPER+W` | — | — |
-| Lock wallpaper | `Alt+L` | `ALT+L` | `ALT+L` | `mod+alt+l` | — |
-| Toggle floating | `Mod+V` | `SUPER+V` | `SUPER+V` | — | `mod+v` |
-| Focus direction | `Mod+H/J/K/L`, arrows | `SUPER+H/J/K/L` | `SUPER+H/J/K/L`, arrows | gesture/canvas focused | `mod+h/j/k/l` |
-| Move window | `Mod+Shift+H/J/K/L`, arrows | `SUPER+Shift+H/J/K/L`, arrows | `SUPER+Shift+H/J/K/L`, arrows | mouse/canvas movement | `mod+shift+h/j/k/l` |
-| Workspace 1–9 | `Mod+1..9` | `SUPER+1..9` | `SUPER+1..9` | — | `mod+1..9` |
-| Move to workspace 1–9 | `Mod+Shift+1..9` | `SUPER+Shift+1..9` | `SUPER+Shift+1..9` | — | `mod+shift+1..9` |
-| Full screenshot | `Print`, `Mod+Ctrl+S`, `Alt+Period` | `Print`, `SUPER+Ctrl+S`, `ALT+Period` | `Print`, `SUPER+Ctrl+S`, `ALT+Period` | `Print` | `mod+s` |
-| Area screenshot | `Alt+Print`, `Mod+Ctrl+R`, `Alt+Comma` | `Alt+Print`, `SUPER+Ctrl+R`, `ALT+Comma` | `Alt+Print`, `SUPER+Ctrl+R`, `ALT+Comma` | `mod+Print` | — |
+| Lock wallpaper | `Alt+L` | `ALT+L` | `ALT+L` | `Mod+alt+l` | — |
+| Toggle floating | `Mod+V` | `SUPER+V` | `SUPER+V` | — | `Mod+v` |
+| Focus direction | `Mod+H/J/K/L`, arrows | `SUPER+H/J/K/L` | `SUPER+H/J/K/L`, arrows | gesture/canvas focused | `Mod+h/j/k/l` |
+| Move window | `Mod+Shift+H/J/K/L`, arrows | `SUPER+Shift+H/J/K/L`, arrows | `SUPER+Shift+H/J/K/L`, arrows | mouse/canvas movement | `Mod+shift+h/j/k/l` |
+| Workspace 1–9 | `Mod+1..9` | `SUPER+1..9` | `SUPER+1..9` | — | `Mod+1..9` |
+| Move to workspace 1–9 | `Mod+Shift+1..9` | `SUPER+Shift+1..9` | `SUPER+Shift+1..9` | — | `Mod+shift+1..9` |
+| Full screenshot | `Print`, `Mod+Ctrl+S`, `Alt+Period` | `Print`, `SUPER+Ctrl+S`, `ALT+Period` | `Print`, `SUPER+Ctrl+S`, `ALT+Period` | `Print` | `Mod+s` |
+| Area screenshot | `Alt+Print`, `Mod+Ctrl+R`, `Alt+Comma` | `Alt+Print`, `SUPER+Ctrl+R`, `ALT+Comma` | `Alt+Print`, `SUPER+Ctrl+R`, `ALT+Comma` | `Mod+Print` | — |
 | Screen recorder | `Ctrl+Print`, `Mod+Shift+R` | `Ctrl+Print`, `SUPER+Shift+R` | `Ctrl+Print`, `SUPER+Shift+R` | — | — |
-| Poweroff | `Alt+O` | `ALT+O` | `ALT+O` | `mod+alt+o` | — |
-| Reboot | `Alt+R` | `ALT+R` | `ALT+R` | `mod+alt+r` | — |
-| Suspend | `Alt+S` | `ALT+S` | `ALT+S` | `mod+alt+s` | — |
+| Poweroff | `Alt+O` | `ALT+O` | `ALT+O` | `Mod+alt+o` | — |
+| Reboot | `Alt+R` | `ALT+R` | `ALT+R` | `Mod+alt+r` | — |
+| Suspend | `Alt+S` | `ALT+S` | `ALT+S` | `Mod+alt+s` | — |
 
 ## WM-specific binds
 
@@ -79,7 +79,7 @@ Source: `Configs/mango/Keybinds.conf`
 |---|---|
 | `SUPER+TAB` | Switch layout |
 | `ALT+M` | Toggle fake fullscreen |
-| `ALT+Z` | Reload MangoWM config |
+| `ALT+N` | Reload MangoWM config |
 | `ALT+I` | Minimize focused window |
 | `ALT+U` | Restore minimized window |
 | `ALT+Space` | Toggle scratchpad |
@@ -121,16 +121,16 @@ DriftWM is canvas/viewport-oriented, so many binds do not map directly to tiling
 
 | Key | Action |
 |---|---|
-| `mod+h` | Home toggle |
-| `mod+m` | Fit window |
-| `mod+c` | Center window |
-| `mod+o` | Zoom to fit |
-| `mod+alt+c` | Reverse cycle windows |
-| `mod+equal` | Zoom in |
-| `mod+minus` | Zoom out |
-| `mod+0` | Reset zoom |
-| `mod+z` | Reload |
-| `mod+ctrl+l` | Lock with `hyprlock` |
+| `Mod+h` | Home toggle |
+| `Mod+m` | Fit window |
+| `Mod+c` | Center window |
+| `Mod+o` | Zoom to fit |
+| `Mod+alt+c` | Reverse cycle windows |
+| `Mod+equal` | Zoom in |
+| `Mod+minus` | Zoom out |
+| `Mod+0` | Reset zoom |
+| `Mod+z` | Reload |
+| `Mod+ctrl+l` | Lock with `hyprlock` |
 | mouse/gesture binds | Move, resize, pan viewport, zoom, navigate canvas |
 
 ### Qtile
@@ -139,15 +139,15 @@ Source: `Configs/qtile/config.py`
 
 | Key | Action |
 |---|---|
-| `mod+space` | Next window focus / app launcher depending binding order |
-| `mod+shift+Return` | Toggle split |
-| `mod+Tab` | Next layout |
-| `mod+n` | Normalize window sizes / launch Yazi depending binding order |
-| `mod+shift+r` | Reload Qtile config |
-| `mod+control+h/j/k/l` | Grow window left/down/up/right |
-| `ctrl+mod+f1..f7` | Switch virtual terminal on Wayland |
-| `mod+h` | Focus left / clipboard depending duplicate binding order |
-| `mod+s` | Screenshot via Flameshot |
+| `Mod+space` | Next window focus / app launcher depending binding order |
+| `Mod+shift+Return` | Toggle split |
+| `Mod+Tab` | Next layout |
+| `Mod+n` | Normalize window sizes / launch Yazi depending binding order |
+| `Mod+shift+r` | Reload Qtile config |
+| `Mod+control+h/j/k/l` | Grow window left/down/up/right |
+| `ctrl+Mod+f1..f7` | Switch virtual terminal on Wayland |
+| `Mod+h` | Focus left / clipboard depending duplicate binding order |
+| `Mod+s` | Screenshot via Flameshot |
 
 ## Notes
 
