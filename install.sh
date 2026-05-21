@@ -16,7 +16,7 @@ if ! command -v yay &>/dev/null; then
   git clone https://aur.archlinux.org/yay-bin.git "$tmpdir/yay-bin"
   (cd "$tmpdir/yay-bin" && makepkg -si --noconfirm)
 else
-  printf "[=] yay already installed\n"
+  printf "[✓] yay already installed\n"
 fi
 
 printf "[+] Creating config directories...\n"
@@ -35,21 +35,6 @@ if [ -d "$DOTFILES" ]; then
   pkglist="$DOTFILES/Configs/installed-pkg/pkglist.txt"
   if [ -f "$pkglist" ]; then
     printf "[+] Installing packages from list...\n"
-
-    if pacman -Qi niri &>/dev/null && grep -q '^niri-git$' "$pkglist"; then
-      printf "[!] Conflict: stable 'niri' is installed, pkglist has 'niri-git'.\n"
-      printf "    [1] Remove stable niri and install niri-git\n"
-      printf "    [2] Skip niri-git, keep stable niri\n"
-      read -rp "    Choice [1/2]: " niri_choice
-      if [[ "$niri_choice" == "1" ]]; then
-        sudo pacman -Rns --noconfirm niri
-      else
-        _filtered=$(mktemp)
-        grep -v '^niri-git$' "$pkglist" > "$_filtered"
-        pkglist="$_filtered"
-      fi
-    fi
-
     xargs yay -S --needed --answerclean None --answerdiff None --noconfirm \
       < "$pkglist"
   fi
