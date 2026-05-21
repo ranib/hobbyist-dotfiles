@@ -2,8 +2,8 @@
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
-hl.workspace_rule({ workspace = "1", layout = "dwindle" })
 hl.workspace_rule({ workspace = "2", layout = "scrolling" })
+hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
 hl.window_rule({
     name   = "float-file-pickers",

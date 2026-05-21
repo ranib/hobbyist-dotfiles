@@ -45,7 +45,7 @@ hl.config({
             size      = 6,
             new_optimizations = true,
             xray = false,
-            popups = true,
+            popups = false,
             popups_ignorealpha = 0,
             noise = 0.02,
             contrast = 1.6,
