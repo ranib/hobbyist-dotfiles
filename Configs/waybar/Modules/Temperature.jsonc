@@ -6,6 +6,6 @@
     "format": "  {temperatureC}°C",
     "tooltip": true,
     "tooltip-format": "CPU temperature: {temperatureC}°C",
-    "on-click-right": "kitty sh -c 'sensors; read'"
+    "on-click-right": "footclient --app-id sensors bash -c 'sensors; read'"
   }
 }
