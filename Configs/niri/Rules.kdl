@@ -72,3 +72,15 @@ window-rule {
   default-column-width { fixed 400; }
   default-window-height { proportion 0.72; }
 }
+
+window-rule {
+  match title="^save to$"
+  open-floating true
+  default-column-width { fixed 1000; }
+  default-window-height { fixed 500; }
+}
+
+window-rule {
+  match app-id="yazi"
+  open-maximized true
+}
