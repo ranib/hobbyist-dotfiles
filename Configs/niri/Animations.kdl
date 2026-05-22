@@ -7,7 +7,12 @@ animations {
   }
 
   window-open {
-    spring damping-ratio=0.45 stiffness=750 epsilon=0.0003
+        duration-ms 160
+        curve "ease-out-expo"
+    }
+
+  // window-open {
+  //   spring damping-ratio=0.45 stiffness=900 epsilon=0.0003
     // duration-ms 100
     // curve "linear"
     // custom-shader r"
@@ -138,7 +143,7 @@ animations {
     //   return final;
     // }
     // "
-  }
+  // }
 
   window-close {
     duration-ms 180

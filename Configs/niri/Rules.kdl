@@ -89,6 +89,7 @@ window-rule {
   match app-id="bluetui"
   match app-id="pulsemixer"
   match app-id="nmtui"
+  match app-id="dashboard"
   match app-id="ncdu"
   match app-id="battery"
   match app-id="sensors"
@@ -98,6 +99,23 @@ window-rule {
   default-floating-position x=20 y=20 relative-to="bottom-right"
   default-column-width { proportion 0.50; }
   default-window-height { proportion 0.55; }
+  shadow {
+        on
+        softness 60
+        spread 5
+        offset x=0 y=10
+        draw-behind-window true
+        color "#000000"
+    }
+}
+
+window-rule {
+  match app-id="dashboard"
+  open-floating true
+  open-focused true
+  default-floating-position x=20 y=20 relative-to="bottom-right"
+  default-column-width { proportion 0.33; }
+  default-window-height { proportion 0.28; }
   shadow {
         on
         softness 60
