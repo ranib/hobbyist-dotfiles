@@ -1,7 +1,6 @@
 spawn-sh-at-startup "waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &"
 spawn-at-startup "mako"
 spawn-sh-at-startup "bash $HOME/.config/Scripts/random_wall_on_home.sh"
-// spawn-at-startup "foot"
 spawn-sh-at-startup "paplay /usr/share/sounds/freedesktop/stereo/service-login.oga"
 spawn-sh-at-startup "sleep 3;paplay /usr/share/sounds/freedesktop/stereo/message.oga|notify-send --icon ~/.config/Resources/images/PFP.jpg 'Welcome back' $USER"
 spawn-at-startup "kdeconnectd"
