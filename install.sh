@@ -89,4 +89,14 @@ cd ~/WhiteSur-icon-theme
 bash install.sh
 rm -rf ~/WhiteSur-icon-theme/
 
-printf "[✓] Setup completed successfully!"
+printf "[✓] Setup completed successfully!\n"
+
+read -rp "Do you want to reboot now? (y/n) " status
+
+if [[ "$status" == "y" ]]; then
+  printf "Rebooting in 3 seconds\n"
+  sleep 3
+  systemctl reboot
+else
+  printf "That's okay\n"
+fi
