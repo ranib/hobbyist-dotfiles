@@ -361,7 +361,7 @@ animations {
 //     }
 
   window-resize {
-    spring damping-ratio=0.50 stiffness=600 epsilon=0.0001
+    spring damping-ratio=0.45 stiffness=750 epsilon=0.0001
   }
 
   config-notification-open-close {
