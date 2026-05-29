@@ -3,5 +3,6 @@ prepend_keymap = [
   { on = [ "u" ], run = 'shell --orphan "bash -c \"pkill swaybg; swaybg -i %s -m fill\""' },
   { on = [ "i" ], run = 'shell --orphan "bash -c \"bash ~/.config/Scripts/kde-send.sh %s\""' },
   { on = [ "d" ], run = "remove --permanently", desc = "Permanently delete selected files" },
+  { on = [ "d", "d" ], run = "remove --permanently --force", desc = "Permanently delete selected files" },
   { on = [ "g", "f" ], run  = "cd ~/hobbyist-dotfiles/Configs/", desc = "Cd to ~/hobbyist-dotfiles/Configs/" },
 ]
