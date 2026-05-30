@@ -96,10 +96,13 @@
 ```bash
 sudo pacman -S --needed --noconfirm git
 ```
-
 ```bash
 git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
+```
+```bash
 cd ~/hobbyist-dotfiles/
+```
+```bash
 bash install.sh
 ```
 
@@ -109,7 +112,13 @@ If GNU Stow reports conflicts, use the helper directly:
 
 ```bash
 bash stow-configs.sh --dry-run
+```
+
+```bash
 bash stow-configs.sh --backup-conflicts
+```
+
+```bash
 bash stow-configs.sh --adopt
 ```
 
