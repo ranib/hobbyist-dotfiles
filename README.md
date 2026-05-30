@@ -105,7 +105,7 @@ cd ~/hobbyist-dotfiles/
 ```bash
 bash install.sh
 ```
-### Oneliner
+### One-liner
 ```bash
 sudo pacman -S --needed --noconfirm git && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git && cd ~/hobbyist-dotfiles/ && bash install.sh
 ```
