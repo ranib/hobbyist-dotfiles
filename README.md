@@ -97,7 +97,7 @@
 sudo pacman -S --needed --noconfirm git
 ```
 ```bash
-git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
+cd ~ && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
 ```
 ```bash
 cd ~/hobbyist-dotfiles/
@@ -107,7 +107,7 @@ bash install.sh
 ```
 ### One-liner
 ```bash
-sudo pacman -S --needed --noconfirm git && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git && cd ~/hobbyist-dotfiles/ && bash install.sh
+sudo pacman -S --needed --noconfirm git && cd ~ && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git && cd ~/hobbyist-dotfiles/ && bash install.sh
 ```
 
 ### Stow conflicts
