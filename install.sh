@@ -71,7 +71,6 @@ if [[ "$init" == "systemd" ]]; then
   fi
 
 else
-  printf "[!] Skipping....\n"
   printf "[!] System is not running on $init\n"
 fi
 
