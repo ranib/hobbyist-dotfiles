@@ -87,6 +87,8 @@
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>E</kbd> | Exit Wayland compositor    |
 
 ## Installation
+> Please check [pkglist](Configs/installed-pkg/pkglist.txt) before excuting install.sh so you have idea what will install
+> By default you will get Niri, Hyprland and Mango
 
 ### Prerequisites
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
