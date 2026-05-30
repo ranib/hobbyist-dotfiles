@@ -87,7 +87,7 @@
 | <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>E</kbd> | Exit Wayland compositor    |
 
 ## Installation
-> Please check [pkglist](Configs/installed-pkg/pkglist.txt) before excuting install.sh so you have idea what will install
+> Please check [pkglist](Configs/installed-pkg/pkglist.txt) before excuting install.sh so you have idea what will install\n
 > By default you will get Niri, Hyprland and Mango
 
 ### Prerequisites
