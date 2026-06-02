@@ -21,6 +21,7 @@ window-rule {
   match title="^Picture-in-Picture$"
   match title=r#"^Picture in picture$"#
   match app-id="org.kde.kdeconnect.daemon"
+  geometry-corner-radius 24
   open-floating true
   open-focused false
   default-floating-position x=20 y=20 relative-to="bottom-right"
@@ -79,9 +80,11 @@ window-rule {
 
 window-rule {
   match title="^save to$"
+  match title="^Authenticate$"
   match title="^Library$"
   match title="^File Upload$"
   open-floating true
+  geometry-corner-radius 24
   default-column-width { fixed 1000; }
   default-window-height { fixed 600; }
   shadow {
