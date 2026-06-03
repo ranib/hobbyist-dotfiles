@@ -1,4 +1,19 @@
+<div align="center">
+
 # Hobbyist dotfiles
+**Beautifully crafted desktop rice for Arch Linux**
+
+![CachyOS](https://img.shields.io/badge/CachyOS-Arch_Linux-1793d1?style=flat-square&logo=archlinux&logoColor=white)
+![MangoWM](https://img.shields.io/badge/WM-MangoWM-e8a87c?style=flat-square)
+![Wayland](https://img.shields.io/badge/Protocol-Wayland-ffbc42?style=flat-square&logo=wayland&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-Fish_+_Starship-4e9a06?style=flat-square)
+![License](https://img.shields.io/badge/License-Personal-lightgrey?style=flat-square)
+
+<br>
+
+</div>
+
+
 
 ## MangoWM
 > [MangoWM](https://github.com/mangowm/mango) is as lightweight as dwl and can be built completely within a few seconds. Despite this, Mango does not compromise on functionality.
