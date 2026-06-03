@@ -106,7 +106,7 @@
 ## Installation
 
 > [!IMPORTANT]
-> Please review the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri and Hyprland. and Niri is set as the default session.
+> Please review the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri and Hyprland, with Niri set as the default session.
 
 ### Prerequisites
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
