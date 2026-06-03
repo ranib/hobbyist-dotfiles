@@ -7,7 +7,7 @@ printf "[+] Starting Arch setup...\n"
 printf "[+] Installing base packages...\n"
 sudo pacman -Syu --needed --noconfirm base-devel stow fish eza git
 
-printf "[+] Verifying whether yay is installed or not...\n"
+printf "[!] Verifying whether yay is installed or not...\n"
 if ! command -v yay &>/dev/null; then
   printf "[!] yay not found\n"
   printf "[+] Installing yay...\n"
@@ -71,8 +71,8 @@ if [[ "$init" == "systemd" ]]; then
   fi
 
 else
-  printf "[!] System is not running on Systemd\n"
-  printf "[!] Skipping"
+  printf "[!] System is not running on systemd\n"
+  printf "[!] Skipping systemd based services\n"
 fi
 
 printf "[+] Fixing bash config\n"
