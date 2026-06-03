@@ -13,8 +13,6 @@
 
 </div>
 
-
-
 ## MangoWM
 > [MangoWM](https://github.com/mangowm/mango) is as lightweight as dwl and can be built completely within a few seconds. Despite this, Mango does not compromise on functionality.
 
@@ -107,7 +105,8 @@
 
 ## Installation
 
-> Please verify the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri (Default) and Hyprland.
+> [!WARNING]
+> Please review the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri (Default) and Hyprland.
 
 ### Prerequisites
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
