@@ -14,6 +14,7 @@
 
 ## Qtile
 > `No longer maintained`
+
 > [Qtile](https://github.com/qtile/qtile/) is a full-featured, hackable tiling window manager written and configured in Python
 
 ### Curious about what it looks like? Here's a glimpse.
