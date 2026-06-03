@@ -13,6 +13,7 @@ eza
 fastfetch
 fd
 fish
+ttf-firacode-nerd
 fzf
 git
 github-cli
