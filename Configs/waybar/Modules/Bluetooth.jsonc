@@ -1,7 +1,7 @@
 {
   "bluetooth": {
-	"format": "  On",
-	"format-disabled": "  Off",
+	"format": "  ON",
+	"format-disabled": "  OFF",
 	"format-connected": "  {device_alias}",
   "format-connected-battery": "  {device_alias} {device_battery_percentage}%",
 	"tooltip-format-connected": "You are connected to {device_enumerate}",

@@ -1,7 +1,7 @@
 {
   "network": {
         "interval": 1,
-        "format-disabled": "    Off",
+        "format-disabled": "    OFF",
         "format-wifi": "    {essid}",
         "format-alt": " {bandwidthUpBytes}   {bandwidthDownBytes}",
         "tooltip-format-wifi": "You are connected to {essid} ({signalStrength}%)",
