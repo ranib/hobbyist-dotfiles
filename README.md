@@ -107,6 +107,9 @@
 > [!IMPORTANT]
 > Please review the [pkglist](Configs/installed-pkg/pkglist.txt) before executing install.sh so you have an idea of what will be installed. By default, you will get Niri and Hyprland, with Niri set as the default session.
 
+> [!WARNING]
+> This repo is managed with [GNU Stow](https://www.gnu.org/software/stow/). Please do not move or delete Repo dir (~/hobbyist-dotfiles/)
+
 ### Prerequisites
 - Clean Arch Linux (recommended) or an Arch-based distro (e.g. EndeavourOS, Manjaro)
 
