@@ -108,21 +108,9 @@ if [[ ! -f "$selected_path" ]]; then
 fi
 
 # ── apply wallpaper ──────────────────────────────────────────────────────────
+# for swaybg
+# pkill -x swaybg 2>/dev/null
+# swaybg -i "$selected_path" -m fill &
 
-# Persist path for hypr session restore
-if [[ -f "$HOME/.config/hypr/shellwrapper.sh" ]]; then
-    sed -i "s|^WALLPAPER=.*|WALLPAPER=\"$selected_path\"|" \
-        "$HOME/.config/hypr/shellwrapper.sh"
-fi
-
-# Pywal (optional — skip if wal not found)
-WAL="$HOME/.local/bin/wal"
-if command -v "$WAL" &>/dev/null || command -v wal &>/dev/null; then
-    "${WAL:-wal}" -i "$selected_path"
-    sleep 2
-fi
-
-# swaybg
-pkill -x swaybg 2>/dev/null
-swaybg -i "$selected_path" -m fill &
-notify-send "Wallpaper Changed" "$(basename "$selected_path")"
+awww img "$selected_path" --transition-type random --transition-fps 60 --transition-duration 1
+sleep 1 && notify-send "Wallpaper changed" "$(basename "$selected_path")" -i "$selected_path"

@@ -186,6 +186,8 @@ Configs/
 │   ├── Arch.png
 │   └── config.jsonc
 ├── fish
+│   ├── completions
+│   │   └── awww.fish
 │   ├── functions
 │   │   ├── cd.fish
 │   │   ├── clean.fish

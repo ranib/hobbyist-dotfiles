@@ -1,6 +1,7 @@
 [mgr]
 prepend_keymap = [
-  { on = [ "u" ], run = 'shell --orphan "bash -c \"pkill swaybg; swaybg -i %s -m fill\""' },
+  # { on = [ "u" ], run = 'shell --orphan "bash -c \"pkill swaybg; swaybg -i %s -m fill\""' },
+  { on = [ "u" ], run = 'shell --orphan "bash -c \"awww img %s --transition-type random --transition-fps 60 --transition-duration 1\""' },
   { on = [ "i" ], run = 'shell --orphan "bash -c \"bash ~/.config/Scripts/kde-send.sh %s\""' },
   { on = [ "d", "d" ], run = "remove --permanently --force", desc = "Permanently delete without confirmation" },
   { on = [ "g", "c" ], run  = "cd ~/hobbyist-dotfiles/Configs/", desc = "Cd to ~/hobbyist-dotfiles/Configs/" },
