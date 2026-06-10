@@ -5,16 +5,12 @@
 hl.workspace_rule({ workspace = "2", layout = "scrolling" })
 hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
-hl.workspace_rule({
-  workspace = "special:scratchpad",
-  on_created_empty = "foot"
-})
-
 hl.window_rule({
     name   = "float-file-pickers",
     match  = { title = "^(Open File|Open Folder|Open|Save|Save As|Export|Import|Choose File|Rename)$" },
     float  = true,
     center = true,
+    decorate = false
 })
 
 hl.window_rule({
@@ -71,6 +67,7 @@ hl.window_rule({
     move = {1500,300},
     opacity = "0.8",
     pin = true,
+    decorate = false,
     size = {"(monitor_w*0.20)","(monitor_h*0.70)"},
 })
 
@@ -125,5 +122,6 @@ hl.window_rule({
     move = {960,510},
     opacity = "1.0",
     pin = true,
+    decorate = false,
     size = {"(monitor_w*0.48)","(monitor_h*0.50)"},
 })

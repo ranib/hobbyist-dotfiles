@@ -51,6 +51,7 @@ hl.config({
             brightness = 0.9,
             vibrancy  = 0.4,
             vibrancy_darkness = 0.4,
+            special = false
         },
     },
 

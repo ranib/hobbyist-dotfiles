@@ -88,7 +88,7 @@ end
 )
 
 hl.bind("ALT + Space",          hl.dsp.workspace.toggle_special("magic"))
-hl.bind("ALT + SHIFT + Space",  hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(mainMod .. " + SHIFT + Space",  hl.dsp.window.move({ workspace = "special:magic" }))
 
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
