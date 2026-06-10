@@ -5,6 +5,11 @@
 hl.workspace_rule({ workspace = "2", layout = "scrolling" })
 hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
+hl.workspace_rule({
+  workspace = "special:scratchpad",
+  on_created_empty = "foot"
+})
+
 hl.window_rule({
     name   = "float-file-pickers",
     match  = { title = "^(Open File|Open Folder|Open|Save|Save As|Export|Import|Choose File|Rename)$" },
@@ -14,9 +19,8 @@ hl.window_rule({
 
 hl.window_rule({
     name  = "pip n kdeconnect daemon popups",
-    match = { title = "Picture-in-Picture|Picture in picture", },
-    match = { class = "org.kde.kdeconnect.daemon" },
-    match = { class = "org.kde.kdeconnect.handler" },
+    match = { title = "Picture-in-Picture|Picture in picture" },
+    match = { class = "org.kde.kdeconnect.handler|org.kde.kdeconnect.daemon" },
     float = true,
     move = {1470,820},
     opacity = "1.0",

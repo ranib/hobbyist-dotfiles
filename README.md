@@ -311,6 +311,7 @@ Configs/
 ├── rofi
 │   ├── clipboard.rasi
 │   ├── config.rasi
+│   ├── glass_minimal.rasi
 │   ├── launchpad.rasi
 │   └── wallpaper-selector.rasi
 ├── Scripts
