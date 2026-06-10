@@ -4,7 +4,7 @@
 
 hl.on("hyprland.start", function () 
   hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("sleep 0.2 && bash $HOME/.config/Scripts/random_wall_on_home.sh")
+  hl.exec_cmd("sleep 0.1 && bash $HOME/.config/Scripts/random_wall_on_home.sh")
   hl.exec_cmd("waybar -c ~/.config/waybar/Hyprland/config.jsonc -s ~/.config/waybar/style.css")
   hl.exec_cmd("kdeconnectd")
   hl.exec_cmd("kdeconnect-indicator")

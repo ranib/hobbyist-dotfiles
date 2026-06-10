@@ -59,6 +59,11 @@ swayimg.viewer.set_text("bottomleft", {          -- bottom left text block schem
 swayimg.viewer.on_key("Escape", function()
   swayimg.exit()
 end)
+
+swayimg.viewer.on_key("q", function()
+  swayimg.exit()
+end)
+
 -- bind the left arrow key to move the image to the left by 1/10 of the application window size
 swayimg.viewer.on_key("Left", function()
   local wnd = swayimg.get_window_size()
