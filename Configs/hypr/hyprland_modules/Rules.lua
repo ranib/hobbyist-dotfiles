@@ -16,6 +16,7 @@ hl.window_rule({
     name  = "pip n kdeconnect daemon popups",
     match = { title = "Picture-in-Picture|Picture in picture", },
     match = { class = "org.kde.kdeconnect.daemon" },
+    match = { class = "org.kde.kdeconnect.handler" },
     float = true,
     move = {1470,820},
     opacity = "1.0",
@@ -113,12 +114,12 @@ local suppressMaximizeRule = hl.window_rule({
 
 hl.window_rule({
     name  = "Floating windows",
-    match = { class = "sensors|bluetui|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus" },
+    match = { class = "sensors|bluetui|thunar|org.kde.kdeconnect.sms|aichat|nmtui|battery|pulsemixer|org.gnome.Nautilus" },
     float = true,
     no_initial_focus = false,
     border_size = 2,
-    move = {930,510},
+    move = {960,510},
     opacity = "1.0",
     pin = true,
-    size = {"(monitor_w*0.50)","(monitor_h*0.50)"},
+    size = {"(monitor_w*0.48)","(monitor_h*0.50)"},
 })

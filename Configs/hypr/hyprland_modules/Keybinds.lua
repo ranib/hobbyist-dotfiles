@@ -35,7 +35,7 @@ hl.bind(mainMod .. " + Backslash", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/s
 hl.bind(mainMod .. " + tab",    hl.dsp.window.cycle_next(), { repeating = true })
 
 hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("~/Applications/helium*"))
-hl.bind(mainMod .. " + ALT + N",    hl.dsp.exec_cmd("nautilus"))
+hl.bind(mainMod .. " + ALT + N",    hl.dsp.exec_cmd("pkill thunar || thunar"))
 hl.bind(mainMod .. " + CTRL + R",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
 hl.bind(mainMod .. " + CTRL + S",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
 hl.bind(mainMod .. " + SHIFT + R",  hl.dsp.exec_cmd(" bash ~/.config/Scripts/screen_recorder.sh"),      { locked = true, repeating = false })
