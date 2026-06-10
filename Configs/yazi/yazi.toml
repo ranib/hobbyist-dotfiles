@@ -35,7 +35,7 @@ play = [
 	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info", for = "unix" },
 ]
 open = [
-	{ run = "swayimg %d", block = true, desc = "swayimg", for = "linux" },
+	{ run = "swayimg %s", block = true, desc = "swayimg", for = "linux" },
 ]
 reveal = [
 	{ run = "xdg-open %d1",         desc = "Reveal", for = "linux" },
