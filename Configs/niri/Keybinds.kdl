@@ -78,6 +78,14 @@ binds {
     Mod+Up    {focus-workspace-up;}
     Mod+Down  {focus-workspace-down;}
 
+    Mod+Home { focus-column-first; }
+    Mod+End  { focus-column-last; }
+    Mod+Shift+Home { move-column-to-first; }
+    Mod+Shift+End  { move-column-to-last; }
+
+    Mod+Shift+U         { move-workspace-down; }
+    Mod+Shift+I         { move-workspace-up; }
+
     Mod+Shift+Left  {move-column-left;}
     Mod+Shift+Down  {move-window-down;}
     Mod+Shift+Up    {move-window-up;}
@@ -118,7 +126,6 @@ binds {
     Mod+Comma  {consume-window-into-column;}
     Mod+Period {expel-window-from-column;}
 
-    Mod+0 {reset-window-height;}
     Alt+M {fullscreen-window;}
     Alt+F {maximize-window-to-edges;}
     Alt+A {expand-column-to-available-width;}
@@ -129,6 +136,10 @@ binds {
     Mod+Shift+Equal {set-window-height "+10%";}
 
     Mod+Shift+V {switch-focus-between-floating-and-tiling;}
+
+    Mod+Tab { switch-preset-column-width; }
+    Mod+Shift+Tab { switch-preset-window-height; }
+    Mod+0 { reset-window-height; }
 
     // Print {screenshot-screen;}
     // Mod+Print {screenshot;}
