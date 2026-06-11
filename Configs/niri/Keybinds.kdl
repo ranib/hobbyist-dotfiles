@@ -139,6 +139,7 @@ binds {
 
     Mod+Tab { switch-preset-column-width; }
     Mod+Shift+Tab { switch-preset-window-height; }
+    Mod+Grave { switch-preset-window-height; }
     Mod+0 { reset-window-height; }
 
     // Print {screenshot-screen;}
