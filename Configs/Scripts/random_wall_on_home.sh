@@ -10,7 +10,7 @@ NIRI=/tmp/blurred_wall.jpg
 
 status=$(ps -C niri -o comm=)
 if [[ $status == "niri" ]]; then 
-  ffmpeg -y -hwaccel vaapi -i "$WALL" -vf "boxblur=20:5" "$NIRI"
+  ffmpeg -y -hwaccel vaapi -i "$WALL" -vf "format=yuv420p,boxblur=20:5" "$NIRI"
   awww img --namespace niri "$NIRI" --transition-type random --transition-fps 60 --transition-duration 1
 fi
 

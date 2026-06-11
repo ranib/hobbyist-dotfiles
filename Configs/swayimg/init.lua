@@ -141,6 +141,12 @@ swayimg.viewer.on_key("Delete", function()
   swayimg.text.set_status("File "..image.path.." removed")
 end)
 
+swayimg.viewer.on_key("d", function()
+  local image = swayimg.viewer.get_image()
+  os.remove(image.path)
+  swayimg.text.set_status("File "..image.path.." removed")
+end)
+
 -- set a custom window title in gallery mode
 swayimg.gallery.on_image_change(function()
   local image = swayimg.gallery.get_image()
