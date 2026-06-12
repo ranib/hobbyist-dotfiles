@@ -327,7 +327,6 @@ Configs/
 │   ├── launcher_toggle.sh
 │   ├── lockscr_greet.sh
 │   ├── mako-sound.sh
-│   ├── mpris.sh
 │   ├── partial_screenshot.sh
 │   ├── powermenu.sh
 │   ├── powermenu_toggle.sh

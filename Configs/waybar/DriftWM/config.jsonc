@@ -7,7 +7,7 @@
     "spacing": 6,
     "reload_style_on_change": true,
 
-    "modules-left": [ "custom/logo","custom/mpris","tray" ],
+    "modules-left": [ "custom/logo","mpris","tray" ],
 
     "custom/logo": {
       "format" : "󰣇   DriftWM",
