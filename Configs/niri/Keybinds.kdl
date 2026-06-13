@@ -17,7 +17,7 @@ binds {
     Mod+P {spawn-sh "pkill wlogout || wlogout";}
     Mod+Q repeat=true {close-window;}
     Mod+R {spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &";}
-    Mod+S {spawn-sh "~/Applications/helium* https://www.youtube.com";}
+    Mod+S {spawn "helium-browser";}
     Mod+T {spawn "kitty";}
     Mod+U {focus-workspace-up;}
     Mod+V {toggle-window-floating;}
@@ -28,21 +28,21 @@ binds {
 
     Mod+Ctrl+R {spawn-sh "bash $HOME/.config/Scripts/partial_screenshot.sh";}
     Mod+Ctrl+S {spawn-sh "bash $HOME/.config/Scripts/full_screenshot.sh";}
+    Mod+Alt+B {spawn "helium-browser";}
+    Mod+Alt+N {spawn-sh "pkill thunar || thunar";}
     Mod+Shift+R {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
     Mod+Space {spawn-sh "pkill rofi || rofi -show drun";}
     Shift+Return {spawn-sh "footclient --app-id aichat -e aichat";}
     Alt+Return {spawn-sh "bash $HOME/.config/Scripts/dashboard_toggle.sh";}
     Mod+Return {spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh";}
     Mod+Backslash {spawn-sh "bash $HOME/.config/Scripts/smassh.sh";}
+    Mod+Delete {spawn-sh "cliphist wipe";}
     Alt+L repeat=false {spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+O repeat=false {spawn-sh "systemctl poweroff";}
     Alt+R repeat=false {spawn-sh "systemctl reboot";}
     Alt+S repeat=false {spawn-sh "systemctl suspend ; bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+W repeat=false {spawn-sh "pkill rofi || bash $HOME/.config/Scripts/wallpaper_switcher.sh";}
     Alt+D repeat=false {spawn-sh "rfkill toggle all";}
-    Mod+Delete {spawn-sh "cliphist wipe";}
-    Mod+Alt+B {spawn-sh "~/Applications/helium*";}
-    Mod+Alt+N {spawn-sh "pkill thunar || thunar";}
 
     XF86AudioRaiseVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%+ && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}
     XF86AudioLowerVolume allow-when-locked=true {spawn-sh "wpctl set-volume -l 1.2 @DEFAULT_AUDIO_SINK@ 10%- && paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga";}

@@ -18,7 +18,7 @@ hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("notify-send 'Hyprland doesnt have an
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("quickshell -p $HOME/.config/quickshell/power_menu/"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { repeating = true })
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("pkill waybar || waybar -c $HOME/.config/waybar/Hyprland/config.jsonc -s $HOME/.config/waybar/style.css"))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("~/Applications/helium* https://youtube.com/"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -34,7 +34,7 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/auto
 hl.bind(mainMod .. " + Backslash", hl.dsp.exec_cmd("bash $HOME/.config/Scripts/smassh.sh"))
 hl.bind(mainMod .. " + tab",    hl.dsp.window.cycle_next(), { repeating = true })
 
-hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("~/Applications/helium*"))
+hl.bind(mainMod .. " + ALT + B",    hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + ALT + N",    hl.dsp.exec_cmd("pkill thunar || thunar"))
 hl.bind(mainMod .. " + CTRL + R",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
 hl.bind(mainMod .. " + CTRL + S",   hl.dsp.exec_cmd(" bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
