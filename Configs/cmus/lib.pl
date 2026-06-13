@@ -191,7 +191,6 @@
 /home/blackspark/Music/Jaani, Mohammad Faiz - Kabhi Shaam Dhale.m4a
 /home/blackspark/Music/Javed-Mohsin, Vishal Mishra, Shreya Ghoshal - Zihaal e Miskin.m4a
 /home/blackspark/Music/Badshah, Arijit Singh - Soulmate.m4a
-/home/blackspark/Music/Priya Saraiya, Aditya Sharma, Jasleen Royal, Stebin Ben, Vijay Deverakonda, Radhikka Madan - Sahiba.m4a
 /home/blackspark/Music/Anuv Jain - Jo Tum Mere Ho.m4a
 /home/blackspark/Music/Abhijeet - Suno Na Suno Na.m4a
 /home/blackspark/Music/Udit Narayan, Alka Yagnik - Tumse Milna.m4a
