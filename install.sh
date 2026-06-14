@@ -4,6 +4,14 @@ set -euo pipefail
 
 printf "[+] Starting Arch setup...\n"
 
+sudo pacman -Syu --needed --noconfirm terminus-font
+
+if [[ "$(tty)" == /dev/tty* ]]; then
+  setfont ter-128b
+else
+  printf "[!] Not in TTY, skipping font size...\n"
+fi
+
 printf "[+] Installing base packages...\n"
 sudo pacman -Syu --needed --noconfirm base-devel stow fish eza git
 
@@ -45,15 +53,22 @@ fi
 
 if command -v fish &>/dev/null; then
   printf "[+] Setting fish as default shell...\n"
-  chsh -s "$(command -v fish)"
+  sudo chsh -s "$(command -v fish)" $USER
 fi
 
 if ! pacman -Q bluez bluez-utils &>/dev/null; then
   yay -S --needed --answerclean None --answerdiff None --noconfirm bluez bluez-utils && printf "bluez and bluez-utils installed successfully\n"
 fi
 
+if [[ -f /etc/vconsole.conf ]]; then
+  printf "[+] Setting console font permanently to ter-128b\n"
+  sudo sed -i '/^FONT=/c\FONT=ter-128b' /etc/vconsole.conf
+fi
+
 init=$(ps -p 1 -o comm=)
 if [[ "$init" == "systemd" ]]; then
+  sudo systemctl restart systemd-vconsole-setup.service
+
   printf "[+] Enabling Bluetooth...\n"
   sudo systemctl enable --now bluetooth.service
   sudo rfkill unblock bluetooth || true
