@@ -1,6 +1,5 @@
 {
   "mpris": {
-    "reverse-scrolling": true,
     "smooth-scrolling-threshold": 2.0,
     "tooltip": false,
     "on-scroll-down": "playerctl position 3+",

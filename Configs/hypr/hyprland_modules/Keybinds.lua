@@ -121,8 +121,8 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),      { locked =
 hl.bind("ALT + V",        hl.dsp.exec_cmd("playerctl next"),          { locked = true })
 hl.bind("ALT + C",        hl.dsp.exec_cmd("playerctl play-pause"),    { locked = true })
 hl.bind("ALT + x",        hl.dsp.exec_cmd("playerctl previous"),      { locked = true })
-hl.bind("ALT + B",        hl.dsp.exec_cmd("playerctl position 1+"),  { locked = true, repeating = true })
-hl.bind("ALT + Z",        hl.dsp.exec_cmd("playerctl position 1-"),  { locked = true, repeating = true })
+hl.bind("ALT + B",        hl.dsp.exec_cmd("playerctl position 1+"),   { locked = true, repeating = true })
+hl.bind("ALT + Z",        hl.dsp.exec_cmd("playerctl position 1-"),   { locked = true, repeating = true })
 
 hl.bind("Print",        hl.dsp.exec_cmd("bash ~/.config/Scripts/full_screenshot.sh"),      { locked = true, repeating = false })
 hl.bind("ALT + Print",  hl.dsp.exec_cmd("bash ~/.config/Scripts/partial_screenshot.sh"),   { locked = true, repeating = false })
@@ -138,7 +138,8 @@ hl.bind("ALT + S", hl.dsp.exec_cmd("systemctl suspend ; bash ~/.config/Scripts/r
 hl.bind("ALT + D", hl.dsp.exec_cmd("rfkill toggle all"),                                                     { locked = true, repeating = false })
 hl.bind("ALT + E", hl.dsp.exec_cmd("rfkill toggle bluetooth"),                                               { locked = true, repeating = false })
 hl.bind("ALT + Y", hl.dsp.exec_cmd("rfkill toggle wifi"),                                                    { locked = true, repeating = false })
-hl.bind("ALT + Q", hl.dsp.exec_cmd("foot -c $HOME/.config/foot/foot_for_cmus.ini --app-id cava -e cava"),                                                    { locked = true, repeating = false })
+hl.bind("ALT + K", hl.dsp.exec_cmd("pkill kdeconnect-app || kdeconnect-app"),                                { repeating = false })
+hl.bind("ALT + Q", hl.dsp.exec_cmd("foot -c $HOME/.config/foot/foot_for_cmus.ini --app-id cava -e cava"),    { repeating = false })
 
 hl.bind(mainMod .. "+ BracketRight", hl.dsp.layout("consume_or_expel next"))
 hl.bind(mainMod .. "+ BracketLeft",  hl.dsp.layout("consume_or_expel prev"))

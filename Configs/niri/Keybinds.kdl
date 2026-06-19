@@ -36,7 +36,7 @@ binds {
     Alt+H {spawn-sh "notify-send 'Not registered'";}
     Alt+I {spawn-sh "notify-send 'Not registered'";}
     Alt+J {spawn-sh "notify-send 'Not registered'";}
-    Alt+K {spawn-sh "notify-send 'Not registered'";}
+    Alt+K {spawn-sh "pkill kdeconnect-app || kdeconnect-app";}
     Alt+L repeat=false {spawn-sh "bash ~/.config/Scripts/random_wall_on_lockscr.sh";}
     Alt+M {fullscreen-window;}
     Alt+N {spawn-sh "niri msg action load-config-file && notify-send 'Config reloaded'";}

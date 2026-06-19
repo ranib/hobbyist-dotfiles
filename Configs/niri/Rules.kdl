@@ -1,6 +1,8 @@
 window-rule {
   geometry-corner-radius 32
   clip-to-geometry true
+  open-maximized-to-edges false
+  open-fullscreen false
   // open-maximized true
 }
 
