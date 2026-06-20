@@ -8,8 +8,6 @@
 ![Shell](https://img.shields.io/badge/Shell-Fish-4e9a06?style=flat-square)
 ![License](https://img.shields.io/badge/License-GPL_3.0-lightgrey?style=flat-square)
 
-<br>
-
 </div>
 
 ## MangoWM
