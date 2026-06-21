@@ -1,4 +1,5 @@
 7zip
+aichat
 android-tools
 bat
 bibata-cursor-theme-bin

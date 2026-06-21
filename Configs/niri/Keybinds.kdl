@@ -3,9 +3,9 @@ binds {
     Mod+B {spawn "librewolf";}
     Mod+C {spawn-sh "bash $HOME/.config/Scripts/rofi_clipboard.sh";}
     Mod+D {spawn-sh "pkill thunar || thunar";}
-    Mod+E {spawn-sh "footclient --app-id bluetui -e bluetui";}
+    Mod+E {spawn-sh "pkill bluetui || foot --app-id bluetui -e bluetui";}
     Mod+F {maximize-column;}
-    Mod+G {spawn-sh "footclient --app-id btop -e btop";}
+    Mod+G {spawn-sh "pkill btop || foot --app-id btop -e btop";}
     Mod+H {focus-column-left;}
     Mod+I {focus-workspace-down;}
     Mod+J {focus-window-down;}
@@ -17,13 +17,13 @@ binds {
     Mod+P {spawn-sh "pkill wlogout || wlogout";}
     Mod+Q repeat=true {close-window;}
     Mod+R {spawn-sh "pkill waybar || waybar -c $HOME/.config/waybar/Niri/config.jsonc -s $HOME/.config/waybar/style.css &";}
-    Mod+S {spawn-sh "pkill helium-browser || helium-browser";}
+    Mod+S {spawn-sh "pkill helium || helium-browser";}
     Mod+T {spawn "kitty";}
     Mod+U {focus-workspace-up;}
     Mod+V {toggle-window-floating;}
     Mod+W repeat=false {spawn-sh "bash $HOME/.config/Scripts/random_wall_on_home.sh";}
-    Mod+X repeat=false {spawn-sh "footclient --app-id cmus -e cmus";}
-    Mod+Y {spawn-sh "footclient --app-id nmtui -e nmtui";}
+    Mod+X repeat=false {spawn-sh "pkill cmus || foot --app-id cmus -e cmus";}
+    Mod+Y {spawn-sh "pkill nmtui || foot --app-id nmtui -e nmtui";}
     Mod+Z repeat=false {spawn-sh "pkill localsend || localsend";}
 
     Alt+A {expand-column-to-available-width;}
@@ -59,7 +59,7 @@ binds {
     Mod+Alt+N {spawn-sh "pkill thunar || thunar";}
     Mod+Shift+R {spawn-sh "bash $HOME/.config/Scripts/screen_recorder.sh";}
     Mod+Space {spawn-sh "pkill rofi || rofi -show drun";}
-    Shift+Return {spawn-sh "footclient --app-id aichat -e aichat";}
+    Shift+Return {spawn-sh "pkill aichat || foot --app-id aichat -e aichat";}
     Alt+Return {spawn-sh "bash $HOME/.config/Scripts/dashboard_toggle.sh";}
     Mod+Return {spawn-sh "bash $HOME/.config/Scripts/auto_detect_terminal.sh";}
     Mod+Backslash {spawn-sh "bash $HOME/.config/Scripts/smassh.sh";}
