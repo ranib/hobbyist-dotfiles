@@ -1,122 +1,146 @@
+@define-color cursor #CDD6F4;
+@define-color background #000000;
+@define-color foreground #CDD6F4;
+@define-color color0  #45475A;
+@define-color color1  #F38BA8;
+@define-color color2  #00aa01;
+@define-color color3  #F9E2AF;
+@define-color color4  #89B4FA;
+@define-color color5  #F5C2E7;
+@define-color color6  #94E2D5;
+@define-color color7  #BAC2DE;
+@define-color color8  #585B70;
+@define-color color9  #F38BA8;
+@define-color color10 #A6E3A1;
+@define-color color11 #F9E2AF;
+@define-color color12 #89B4FA;
+@define-color color13 #F5C2E7;
+@define-color color14 #94E2D5;
+@define-color color15 #A6ADC8;
+
 * {
-    font-family: Google Sans Flex;
-    font-size: 16px;
-    padding: 0px 2px 0px 2px;
+  font-family: "Google Sans Flex";
+  font-size: 20px;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 window#waybar {
-    background-color: rgba(00, 00, 00, 0.9);
-    color: white;
-    border-radius: 24px;
-    margin: 0px;
-    padding: 0px;
+  background: @background;
+}
+
+#custom-arch:hover,
+#cpu:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#pulseaudio.microphone:hover,
+#pulseaudio.sink-muted:hover,
+#custom-powermenu:hover {
+  opacity: 0.6;
+}
+
+#custom-arch,
+#cpu,
+#clock,
+#mpris,
+#custom-menu,
+#tray,
+#privacy,
+#network,
+#bluetooth,
+#pulseaudio,
+#pulseaudio.microphone,
+#backlight,
+#battery,
+#custom-powermenu {
+  color: @foreground;
+  padding: 6px 0;
 }
 
 #workspaces button {
-    color: white;
-    border-radius: 24px;
+  color: @foreground;
+  padding: 0;
 }
-
 #workspaces button.active {
-    transition: all 0.2s ease-in-out;
-    color: white;
-    border-radius: 24px;
+  color: @color2;
 }
 
-#workspaces button:hover {
-    color: black;
+#privacy {
+  margin: 4px;
+  color: @color3;
 }
 
-#backlight:hover,
-#pulseaudio:hover {
-    background-color: #5962ff;
-    transition: all 0.2s ease-in-out;
+#clock {
+  color: @color4;
+}
+
+#mpris {
+  color: @color3;
+}
+
+#network.disabled {
+  color: @color1;
+}
+#network.wifi {
+  color: @color2;
+}
+#network.ethernet {
+  color: @color3;
+}
+
+#bluetooth.disabled {
+  color: @color1;
+}
+#bluetooth.connected {
+  color: @color4;
+}
+
+#pulseaudio.sink-muted:not(.microphone) {
+  color: @color3;
+}
+#pulseaudio.microphone.source-muted {
+  color: @color1;
+}
+
+#battery.plugged {
+  color: @color4;
+}
+#battery.charging {
+  color: @color2;
+}
+#battery.critical {
+  color: @color3;
 }
 
 tooltip {
-  border-radius: 32px;
-  transition: all 0.2s ease-in-out;
+  background: @background;
+  border: 1px solid @foreground;
+}
+tooltip * {
+  color: @foreground;
+  margin: 2px;
+  background: @background;
 }
 
-tooltip label {
-  color: white;
-  transition: all 0.2s ease-in-out;
-  padding: 12px 20px 12px 20px;
+#pulseaudio-slider,
+#backlight-slider {
+  min-height: 100px;
 }
 
-#workspaces,
-#temperature,
-#temperature.warning,
-#temperature.critical,
-#battery.critical:not(.charging),
-#battery.warning:not(.charging),
-#battery.charging,
-#battery.plugged,
-#battery.full,
-#custom-logo,
-#custom-power,
-#mpris,
-#pulseaudio.muted,
-#pulseaudio,
-#bluetooth,
-#network,
-#network.disconnected,
-#backlight,
-#battery,
-#network.disconnected,
-#cpu,
-#tray,
-#memory,
-#disk,
-#clock {
-background-color: rgba(255, 255, 255, 0.1);
-transition: all 0.2s ease-in-out;
-color: white;
-border-radius: 32px;
-padding: 1px 12px 0px 12px;
-margin: 4px 0px 4px 0px;
+#pulseaudio-slider slider,
+#backlight-slider slider {
+  background: transparent;
 }
 
-#workspaces {
-padding: 0px 4px 0px 4px;
+#pulseaudio-slider trough,
+#backlight-slider trough {
+  min-width: 8px;
 }
 
-#battery.charging,
-#battery.plugged {
-background-color: #00aa01;
+#pulseaudio-slider highlight {
+  background: @color4;
 }
-
-@keyframes blink {
-    to {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: white;
-    }
-}
-
-#battery.critical:not(.charging),
-#temperature.critical {
-background-color: #FF0000;
-animation-name: blink;
-animation-duration: 1.0s;
-animation-timing-function: steps(20);
-animation-iteration-count: infinite;
-animation-direction: alternate;
-}
-
-#battery.warning:not(.charging),
-#temperature.warning {
-background-color: #FF7300;
-}
-
-#battery.full {
-background-color: #5962ff;
-}
-
-#custom-power {
-padding: 1px 16px 0px 12px;
-}
-
-#network.disconnected,
-#pulseaudio.muted {
-background-color: #f2000e;
+#backlight-slider highlight {
+  background: @color3;
 }
