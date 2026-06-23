@@ -94,7 +94,7 @@ printf "[+] Fixing bash config\n"
 if [[ -f "$HOME/.config/Scripts/bashfix.sh" ]]; then
   bash "$HOME/.config/Scripts/bashfix.sh"
 else
-  printf "bashfix not found\n"
+  printf "[!] bashfix not found\n"
 fi
 
 # xhost +si:localuser:root
@@ -110,9 +110,33 @@ else
   rm -rf ~/Tela-icon*
 fi
 
+read -rp "Do you want to clean system ? (y/n) " answ
+
+if [[ "$answ" == "y" ]]; then
+  printf "[✓] Removing orphan packages...\n"
+
+  if [[ -n "$(pacman -Qdtq)" ]]; then
+    sudo pacman -Rns --noconfirm $(pacman -Qdtq)
+  fi
+
+  printf "[✓] Cleaning AUR dependencies...\n"
+  yay -Yc --noconfirm
+
+  printf "[✓] Cleaning package cache...\n"
+  sudo rm -rf /var/cache/pacman/pkg/download-*/
+
+  printf "[✓] Removing yay cache...\n"
+  rm -rf ~/.cache/yay
+
+  printf "[✓] Cleaning logs...\n"
+  sudo journalctl --vacuum-time=7d
+
+  printf "[✓] Cleanup done\n"
+fi
+
 printf "[✓] Setup completed successfully!\n"
 
-read -rp "Do you want to reboot now? (y/n) " status
+read -rp "Do you want to reboot now ? (y/n) " status
 
 if [[ "$status" == "y" ]]; then
   printf "Rebooting in 3 seconds\n"
