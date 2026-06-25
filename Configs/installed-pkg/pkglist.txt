@@ -43,7 +43,6 @@ slurp
 stow
 awww
 swayimg
-thunar-bin
 thunar-extended
 tree
 unzip
