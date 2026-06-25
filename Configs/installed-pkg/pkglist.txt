@@ -34,6 +34,7 @@ pipewire-alsa
 pipewire-pulse
 pixman
 polkit-gnome
+quickshell
 foot
 pulsemixer
 rofi
