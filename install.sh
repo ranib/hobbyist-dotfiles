@@ -55,9 +55,9 @@ if command -v fish &>/dev/null; then
   sudo chsh -s "$(command -v fish)" $USER
 fi
 
-if ! pacman -Q bluez bluez-utils &>/dev/null; then
-  yay -S --needed --answerclean None --answerdiff None --noconfirm bluez bluez-utils && printf "bluez and bluez-utils installed successfully\n"
-fi
+#if ! pacman -Q bluez bluez-utils &>/dev/null; then
+  #yay -S --needed --answerclean None --answerdiff None --noconfirm bluez bluez-utils && printf "bluez and bluez-utils installed successfully\n"
+#fi
 
 if [[ -f /etc/vconsole.conf ]]; then
   printf "[+] Setting console font permanently to latarcyrheb-sun32\n"
@@ -69,14 +69,14 @@ init=$(ps -p 1 -o comm=)
 if [[ "$init" == "systemd" ]]; then
   sudo systemctl restart systemd-vconsole-setup.service
 
-  printf "[+] Enabling Bluetooth...\n"
-  sudo systemctl enable --now bluetooth.service
-  sudo rfkill unblock bluetooth || true
+  #printf "[+] Enabling Bluetooth...\n"
+  #sudo systemctl enable --now bluetooth.service
+  #sudo rfkill unblock bluetooth || true
 
-  printf "[+] Setting Niri as default...\n"
-  if [[ -f "$HOME/.config/systemd/user/niri.service" ]]; then
+  printf "[+] Setting Mango as default...\n"
+  if [[ -f "$HOME/.config/systemd/user/mango.service" ]]; then
     systemctl --user daemon-reload
-    systemctl --user enable niri.service
+    systemctl --user enable mango.service
   fi
 
   printf "[+] Enabling mako sound...\n"
