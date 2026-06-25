@@ -2,7 +2,7 @@
   "clock": {
     "interval": 1,
     "tooltip": false,
-    "format": "It's {:%H:%M:%S}",
+    "format": "{:%h:%m %p}", on %a, %b %d
     "format-alt": "It’s {:%H:%M:%S on %A, %d %B %Y}"
     }
 }
