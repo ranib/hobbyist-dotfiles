@@ -115,14 +115,14 @@
 sudo pacman -Syu --needed --noconfirm git
 ```
 ```bash
-cd ~ && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git
+cd ~ && git clone https://github.com/ranib/hobbyist-dotfiles.git
 ```
 ```bash
 bash ~/hobbyist-dotfiles/install.sh
 ```
 ### One-liner
 ```bash
-sudo pacman -Syu --needed --noconfirm git && cd ~ && git clone https://github.com/BlackSparkz/hobbyist-dotfiles.git && bash ~/hobbyist-dotfiles/install.sh
+sudo pacman -Syu --needed --noconfirm git && cd ~ && git clone https://github.com/ranib/hobbyist-dotfiles.git && bash ~/hobbyist-dotfiles/install.sh
 ```
 
 ### Stow conflicts
