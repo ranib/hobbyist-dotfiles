@@ -1,8 +1,8 @@
 [Unit]
-Description=Niri Wayland Compositor
+Description=MangoWM Wayland Compositor
 
 [Service]
-ExecStart=/usr/bin/niri
+ExecStart=/usr/bin/mango
 Restart=on-failure
 
 [Install]
